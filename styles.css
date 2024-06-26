@@ -19,10 +19,45 @@ main {
 }
 
 .digital-clock-box {
+  position: relative;
   padding: 20px;
-  width: 360px;
+  height: 220px;
+  width: 460px;
   background: white;
   border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 20px;
+  box-shadow: 15px 20px rgb(49, 49, 49);
+  transition: 0.4s;
+}
+
+.digital-clock-box .toogle-btn {
+  position: absolute;
+  border: none;
+  height: 32px;
+  width: 32px;
+  color: white;
+  background-color: rgb(49, 49, 49);
+  border-radius: 100%;
+  right: 22px;
+  top: 22px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.digital-clock-box .date-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.date-icon {
+  font-size: 24px;
+  color: rgb(49, 49, 49);
 }
 
 .digital-clock-box .date {
@@ -31,9 +66,37 @@ main {
   font-size: 18px;
 }
 
+.digital-clock-box .time-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 8px;
+}
+
+.clock-icon {
+  font-size: 35px;
+  color: rgb(49, 49, 49);
+  margin-right: 14px;
+  flex-basis: 10%;
+}
+
 .digital-clock-box .time {
   text-align: center;
   color: rgb(49, 49, 49);
   font-size: 35px;
-  margin-top: 10px;
+  flex-basis: 90%;
+}
+
+.digital-clock-box.dark {
+  background: rgb(49, 49, 49);
+  transition: all 0.4s;
+  box-shadow: 15px 20px white;
+}
+
+.digital-clock-box.dark .date,
+.digital-clock-box.dark .time,
+.digital-clock-box.dark .date-icon,
+.digital-clock-box.dark .clock-icon {
+  color: white;
 }
